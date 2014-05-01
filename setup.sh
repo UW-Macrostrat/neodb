@@ -15,6 +15,6 @@ psql -p $DB_PORT -U $DB_USER -c "CREATE EXTENSION postgis;" $DB_NAME
 
 psql -p $DB_PORT -U $DB_USER -c "CREATE EXTENSION postgis_topology;"
 
-psql --set 'user='$DB_USER -p $DB_PORT -U $DB_USER -f setup/create_database.sql $DB_NAME
+psql --set 'user='$DB_USER -p $DB_PORT -U $DB_USER -f create_database.sql $DB_NAME
 
-psql -p $DB_PORT -U $DB_USER -f setup/fill_tables.sql $DB_NAME
+psql -p $DB_PORT -U $DB_USER -f fill_tables.sql $DB_NAME
